@@ -80,7 +80,7 @@ class SeabornFormatter(logging.Formatter):
     """
     header_width = 80
     line_break_width = 200 # if msg is longer than this then it will get truncated
-    max_width = 10000        # if msg is longer than this then it will truncate the message
+    max_width = 10000      # if msg is longer than this then it will truncate the message
     date_format = "%Y-%m-%d %H:%M:%S"
     str_format = "%(asctime)s.%(msecs)s %(module)s.%(funcName)s:%(lineno)d %(levelname)s>> %(message)s"
     relative_pathname = None
