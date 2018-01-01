@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='seaborn-logger',
     version='0.0.1',
-    description='SeabornLogger enables the streaming of the'
+    description='SeabornLogger enables the streaming of the '
                 'data relevant ot a program\'s to a logging file',
     long_description='',
     author='Ben Christenson',

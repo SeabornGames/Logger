@@ -20,7 +20,8 @@ def skip_module(*modules):
     :param modules: list of modules to exclude
     :return:        None
     """
-    modules = (modules and isinstance(modules[0], list)) and modules[0] or modules
+    modules = (modules and isinstance(modules[0], list)) and \
+              modules[0] or modules
 
     for module in modules:
         if not module in SKIPPED_MODULES:
@@ -34,7 +35,8 @@ def only_module(*modules):
     :param modules: list of modules to report in traceback
     :return:        None
     """
-    modules = (modules and isinstance(modules[0], list)) and modules[0] or modules
+    modules = (modules and isinstance(modules[0], list)) and \
+              modules[0] or modules
     for module in modules:
         if not module in ONLY_MODULES:
             ONLY_MODULES.append(module)
