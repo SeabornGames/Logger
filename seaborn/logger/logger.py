@@ -6,7 +6,7 @@ import io
 import traceback
 from logging import currentframe, DEBUG
 
-from seaborn.file import mkdir_for_file
+from seaborn.file.file import mkdir_for_file
 
 
 class SeabornLogger(logging.Logger):
@@ -304,7 +304,7 @@ def setup_file_logging(log_filename, log_file_level="DEBUG", str_format=None,
     :param silence_modules  list of str of modules to silence
     :return:                None
     """
-    from seaborn.timestamp import datetime_to_str
+    from seaborn.timestamp.timestamp import datetime_to_str
     if os.path.exists(log_filename) and log_restart:
         os.remove(log_filename)
 

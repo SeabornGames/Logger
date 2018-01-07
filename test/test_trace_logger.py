@@ -2,7 +2,7 @@ __author__ = 'Ben Christenson'
 __date__ = "1/5/18"
 
 import unittest
-from seaborn.logger import *
+from seaborn.logger.logger import *
 
 class traceTest(unittest.TestCase):
     def test_basic(self):
