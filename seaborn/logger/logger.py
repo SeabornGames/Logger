@@ -6,7 +6,7 @@ import io
 import traceback
 from logging import currentframe, DEBUG
 
-from seaborn.file import mkdir_for_file
+from seaborn.file.file import mkdir_for_file
 
 
 class SeabornLogger(logging.Logger):
