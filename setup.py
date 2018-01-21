@@ -12,7 +12,9 @@ setup(
     download_url='https://github.com/SeabornGames/Logger'
                  '/tarball/download',
     keywords=['logging'],
-    install_requires=[],
+    install_requires=[
+        'seaborn-file'
+    ],
     extras_require={
     },
     packages=['seaborn'] + ['seaborn.' + i
