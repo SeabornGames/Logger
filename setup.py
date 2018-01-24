@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='seaborn-logger',
-    version='0.0.1',
+    version='0.0.2',
     description='SeabornLogger enables the streaming of the '
                 'data relevant ot a program\'s to a logging file',
     long_description='',
@@ -13,7 +13,8 @@ setup(
                  '/tarball/download',
     keywords=['logging'],
     install_requires=[
-        'seaborn-file'
+        'seaborn-file',
+        'seaborn-timestamp'
     ],
     extras_require={
     },
