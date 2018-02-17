@@ -1,11 +1,14 @@
 from setuptools import setup, find_packages
+import os
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as f:
+    long_description = f.read()
 
 setup(
     name='seaborn-logger',
     version='0.0.2',
     description='SeabornLogger enables the streaming of the '
                 'data relevant ot a program\'s to a logging file',
-    long_description='',
+    long_description=long_description,
     author='Ben Christenson',
     author_email='Python@BenChristenson.com',
     url='https://github.com/SeabornGames/Logger',
