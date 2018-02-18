@@ -1,4 +1,4 @@
-from seaborn.logger.logger import *
+from seaborn_logger.logger import *
 
 def smoke_test():
     import requests
