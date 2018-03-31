@@ -1,5 +1,4 @@
 import unittest
-
 from seaborn_logger.logger import *
 
 
