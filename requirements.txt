@@ -1,1 +1,1 @@
-seaborn-file
+git+https://github.com/SeabornGames/file.git#egg=seaborn-file
