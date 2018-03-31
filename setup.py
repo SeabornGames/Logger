@@ -18,6 +18,8 @@ setup(
     keywords=['logging'],
     install_requires=[],
     extras_require={
+        'test': [
+        ]
     },
     packages=['seaborn_logger'],
     license='MIT License',
