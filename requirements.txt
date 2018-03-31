@@ -1,1 +1,2 @@
 git+https://github.com/SeabornGames/file.git#egg=seaborn-file
+git+https://github.com/SeabornGames/timestamp.git#egg=seaborn-timestamp

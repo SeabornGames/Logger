@@ -20,7 +20,8 @@ setup(
                  '/tarball/download',
     keywords=['logging'],
     install_requires=[
-        'seaborn_file'
+        'seaborn_file',
+        'seaborn-timestamp',
     ],
     extras_require={
         'test': [
