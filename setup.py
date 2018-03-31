@@ -24,6 +24,7 @@ setup(
     ],
     extras_require={
         'test': [
+            'requests'
         ]
     },
     packages=['seaborn_logger'],
