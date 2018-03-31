@@ -1,2 +1,3 @@
-# SeabornParseDoc
-SeabornFile enables the manipulation of the directories of a computer within a program.
+# Seaborn Logger
+Seaborn Logger standardizes logging using the python logging.  It
+also handles logging exception messages.

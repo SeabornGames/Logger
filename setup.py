@@ -1,11 +1,15 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 import os
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as f:
-    long_description = f.read()
+
+try:
+    with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
+        long_description = f.read()
+except Exception:
+    long_description = ''
 
 setup(
     name='seaborn-logger',
-    version='0.0.2',
+    version='1.0.0',
     description='SeabornLogger enables the streaming of the '
                 'data relevant ot a program\'s to a logging file',
     long_description=long_description,
@@ -16,13 +20,15 @@ setup(
                  '/tarball/download',
     keywords=['logging'],
     install_requires=[
-        'seaborn-file',
-        'seaborn-timestamp'
+        'seaborn_file',
+        'seaborn-timestamp',
     ],
     extras_require={
+        'test': [
+            'requests'
+        ]
     },
-    packages=['seaborn'] + ['seaborn.' + i
-                            for i in find_packages(where='./seaborn')],
+    packages=['seaborn_logger'],
     license='MIT License',
     classifiers=[
         'Intended Audience :: Developers',

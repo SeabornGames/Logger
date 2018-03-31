@@ -6,7 +6,7 @@ import io
 import traceback
 from logging import currentframe, DEBUG
 
-from seaborn.file.file import mkdir_for_file
+from seaborn_file.file import mkdir_for_file
 
 
 class SeabornLogger(logging.Logger):
@@ -27,6 +27,7 @@ class SeabornLogger(logging.Logger):
 
     def __init__(self, name='seaborn'):
         if sys.version_info[0] == 2:
+            # todo review if this should be levelNames
             logging._levelNames[self.TRACE] = 'TRACE'
             logging._levelNames['TRACE'] = self.TRACE
             logging._levelNames[self.TRACE2] = 'TRACE2'
@@ -79,10 +80,9 @@ class SeabornFormatter(logging.Formatter):
         and left justify it to the header width
     """
     header_width = 80
-    line_break_width = 200 # if msg is longer than this
-                           # then it will get truncated
-    max_width = 10000      # if msg is longer than this
-                           # then it will truncate the message
+    # todo clarify
+    line_break_width = 200 # truncated if msg is longer than this
+    max_width = 10000      # truncate if msg is longer than this
     date_format = "%Y-%m-%d %H:%M:%S"
     str_format = "%(asctime)s.%(msecs)s %(module)s.%(funcName)s:%(lineno)d " \
                  "%(levelname)s>> %(message)s"
@@ -304,7 +304,7 @@ def setup_file_logging(log_filename, log_file_level="DEBUG", str_format=None,
     :param silence_modules  list of str of modules to silence
     :return:                None
     """
-    from seaborn.timestamp.timestamp import datetime_to_str
+    from seaborn_timestamp.timestamp import datetime_to_str
     if os.path.exists(log_filename) and log_restart:
         os.remove(log_filename)
 
