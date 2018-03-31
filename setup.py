@@ -1,22 +1,27 @@
 from setuptools import setup
 import os
 
-with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
-    long_description = f.read()
+try:
+    with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
+        long_description = f.read()
+except Exception:
+    long_description = ''
 
 setup(
     name='seaborn-logger',
     version='1.0.0',
     description='SeabornLogger enables the streaming of the '
                 'data relevant ot a program\'s to a logging file',
-    long_description='',
+    long_description=long_description,
     author='Ben Christenson',
     author_email='Python@BenChristenson.com',
     url='https://github.com/SeabornGames/Logger',
     download_url='https://github.com/SeabornGames/Logger'
                  '/tarball/download',
     keywords=['logging'],
-    install_requires=[],
+    install_requires=[
+        'seaborn_file'
+    ],
     extras_require={
         'test': [
         ]
