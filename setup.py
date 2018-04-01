@@ -21,7 +21,7 @@ setup(
     keywords=['logging'],
     install_requires=[
         'seaborn_file',
-        'seaborn-timestamp',
+        'seaborn_timestamp',
     ],
     extras_require={
         'test': [
